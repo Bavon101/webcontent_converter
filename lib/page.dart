@@ -63,17 +63,17 @@ class PaperFormat {
 
   final num width, height;
 
-  const PaperFormat.inches({@required this.width, @required this.height});
+  const PaperFormat.inches({required this.width, required this.height});
 
-  PaperFormat.px({@required int width, @required int height})
+  PaperFormat.px({required int width, required int height})
       : width = _pxToInches(width),
         height = _pxToInches(height);
 
-  PaperFormat.cm({@required num width, @required num height})
+  PaperFormat.cm({required num width, required num height})
       : width = _cmToInches(width),
         height = _cmToInches(height);
 
-  PaperFormat.mm({@required num width, @required num height})
+  PaperFormat.mm({required num width, required num height})
       : width = _mmToInches(width),
         height = _mmToInches(height);
 
@@ -95,7 +95,7 @@ class PdfMargins {
 
   PdfMargins({this.top: 0, this.bottom: 0, this.left: 0, this.right: 0});
 
-  PdfMargins.inches({num top, num bottom, num left, num right})
+  PdfMargins.inches({num? top, num? bottom, num? left, num? right})
       : top = top ?? 0,
         bottom = bottom ?? 0,
         left = left ?? 0,
